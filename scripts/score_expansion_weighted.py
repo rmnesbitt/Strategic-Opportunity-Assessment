@@ -5,7 +5,7 @@ pd.set_option("display.width", None)
 pd.set_option("display.max_columns", None)
 
 # load dataframe from csv
-df = pd.read_csv("../output/enterprise_saas_segment_data.csv")
+df = pd.read_csv("../data/enterprise_saas_segment_data.csv")
 
 # remove CostToServe from AvgRevenue
 df["NetAvgRevenue"] = df["AvgRevenue"] - df["CostToServe"]
@@ -41,7 +41,7 @@ segment_summary = df.groupby("Segment").agg({
 segment_summary = segment_summary.sort_values(by="WeightedScore", ascending=False)
 
 # export to csv
-segment_summary.to_csv("../data/summary_expansion_weighted.csv", index=False)
+segment_summary.to_csv("../output/summary_expansion_weighted.csv", index=False)
 
 # round for readability and print
 segment_summary = segment_summary.round(2)
