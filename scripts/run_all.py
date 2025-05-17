@@ -22,4 +22,7 @@ import scripts.score_strategy_weighted
 print("\n>>> STEP 7: Export Final Comparison")
 import scripts.score_summary
 
+print("\n>>> STEP 8: Generate Charts")
+import scripts.generate_charts
+
 print("\n>>> All steps completed.")
