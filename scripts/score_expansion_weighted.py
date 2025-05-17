@@ -5,7 +5,7 @@ pd.set_option("display.width", None)
 pd.set_option("display.max_columns", None)
 
 # load dataframe from csv
-df = pd.read_csv("../data/enterprise_saas_segment_data.csv")
+df = pd.read_csv("../output/enterprise_saas_segment_data.csv")
 
 # remove CostToServe from AvgRevenue
 df["NetAvgRevenue"] = df["AvgRevenue"] - df["CostToServe"]
